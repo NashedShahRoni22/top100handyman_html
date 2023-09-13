@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Top100Handyman</title>
+    <!-- favicon  -->
+    <link rel="shortcut icon" href="./assets/logo.png" type="image/x-icon" />
+    <!-- internal css  -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- icons link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <!-- tailwind cdn  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- top bar -->
+    <div class="bg-[#1D1D20] py-4 hidden lg:block">
+      <div
+        class="flex justify-between items-center text-white mx-5 lg:container lg:mx-auto"
+      >
+        <div class="flex items-center gap-2">
+          <i class="fa-solid fa-phone"></i>
+          <p class="text-[13px]">Call Now: +65 8578 5018</p>
+        </div>
+        <div class="flex gap-4">
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-linkedin"></i>
+          <i class="fa-brands fa-whatsapp"></i>
+        </div>
+      </div>
+    </div>
+    <!-- navbar -->
+    <header class="py-5">
+      <nav
+        class="flex justify-between items-center md:container md:mx-auto mx-5"
+      >
+        <div class="z-40">
+          <a class="flex gap-2 items-center" href="#">
+            <img
+              src="./assets/logo.png"
+              alt="nav_logo"
+              class="w-[50px] h-[50px]"
+            />
+            <p class="uppercase text-[#ED1B24] font-extrabold text-xl">
+              Top100Handyman
+            </p>
+          </a>
+        </div>
+        <div
+          class="nav-links duration-500 lg:static absolute z-30 bg-white min-h-[100vh] lg:min-h-fit left-0 top-[-100%] lg:w-auto w-full flex items-center px-5 py-5 lg:py-0"
+        >
+          <ul
+            class="flex lg:flex-row flex-col w-full lg:gap-[4vw] gap-8 text-3xl lg:text-[16px] text-[#202020] uppercase font-semibold"
+          >
+            <li>
+              <a class="hover:text-[#ED1B24]" href="./index.html">Home</a>
+            </li>
+            <li>
+              <a class="hover:text-[#ED1B24]" href="./about_us.html"
+                >About Us</a
+              >
+            </li>
+            <li class="relative group">
+              <a
+                href="./secvices.html"
+                class="hover:text-[#ED1B24] cursor-pointer"
+                >Services</a
+              >
+              <ul
+                class="lg:absolute hidden lg:group-hover:block ease-linear bg-white p-5"
+              >
+                <li>
+                  <a
+                    class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                    href="./services/electrical.html"
+                    >Electrical</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                    href="./services/plumbling.html"
+                    >Plumbing</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                    href="./services/painting.html"
+                    >Painting</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                    href="./services/carpentar.html"
+                    >Carpentry</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                    href="./services/door_repair.html"
+                    >Door Repair</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                    href="#"
+                    >Locksmith</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                    href="#"
+                    >Lekage Repair</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                    href="#"
+                    >Wall Mount <br />
+                    Installation</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a class="hover:text-[#ED1B24]" href="./works.html">Our Works</a>
+            </li>
+            <li>
+              <a class="hover:text-[#ED1B24]" href="./contact_us.html"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="flex items-center gap-6 z-40 w-fit">
+          <ion-icon
+            onclick="onToggleMenu(this)"
+            name="menu"
+            class="text-3xl cursor-pointer lg:hidden text-[#ED1B24]"
+          ></ion-icon>
+        </div>
+      </nav>
+    </header>
+    <!-- fixed contact options -->
+    <div
+      class="w-fit fixed top-1/4 right-0 md:left-0 md:top-1/3 lg:top-1/2 group z-20"
+    >
+      <a
+        href="http://wa.me/+6585785018"
+        class="flex gap-4 bg-[#ED1B24] p-3 text-white font-semibold"
+      >
+        <i class="fa-brands fa-whatsapp text-xl"></i>
+        <p class="hidden group-hover:block ease-in-out duration-300">
+          +65 8578 5018
+        </p>
+      </a>
+      <a
+        href="tel:+6585785018"
+        class="flex gap-4 bg-[#151515] p-3 text-white font-semibold"
+      >
+        <i class="fa-solid fa-phone-volume text-xl"></i>
+        <p class="hidden group-hover:block ease-in-out duration-300">
+          +65 8578 5018
+        </p>
+      </a>
+      <a
+        href="mailto:nashedshah@gmail.com"
+        class="flex gap-4 bg-[#ED1B24] p-3 text-white font-semibold"
+      >
+        <i class="fa-solid fa-envelope text-xl"></i>
+        <p class="hidden group-hover:block ease-in-out duration-300">
+          alamripo@yahoo.com
+        </p>
+      </a>
+    </div>
+    <main>
+      <!-- hero banner  -->
+      <section class="banner relative h-[60vh] lg:h-[100vh] z-0">
+        <div class="absolute top-0 h-full w-full bg-black/80">
+          <div class="flex flex-col items-center justify-center h-full">
+            <div class="text-white flex gap-4 items-center font-bold">
+              <p class="text-[32px] lg:text-[52px]">24<span>x</span>7</p>
+              <div class="h-full w-0.5 bg-white"></div>
+              <div>
+                <p>Call us Now</p>
+                <p class="text-[#ED1B24] font-semibold bg-white p-1 mt-1">
+                  +65 8578 5018
+                </p>
+              </div>
+            </div>
+            <p
+              class="text-white text-[36px] lg:text-[56px] font-bold uppercase text-center"
+            >
+              Need help right away?
+            </p>
+            <p class="text-[#D1D1D1] lg:text-[18px] text-center">
+              Since our begining. we have worked tirelessly to earn our <br />
+              reputation for quality. service and dependability
+            </p>
+            <a
+              href="#service"
+              class="uppercase px-4 py-2 bg-[#ED1B24] text-white mt-5 text-xs lg:text-base border hover:bg-transparent"
+            >
+              Learn More
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- why choose us -->
+      <section class="mx-5 md:container md:mx-auto my-20 py-20">
+        <h2 class="text-3xl font-bold">WHY CHOOSE US</h2>
+        <div class="h-0.5 w-1/3 bg-[#ED1B24] my-4"></div>
+        <p class="font-semibold text-lg text-[#ED1B24]">
+          Fully Licensed, Bonded, And Insured
+        </p>
+        <div class="grid md:grid-cols-2 gap-8 mt-10">
+          <div
+            class="flex gap-4 hover:shadow-xl ease-in-out p-4 cursor-pointer"
+          >
+            <i class="fa-solid fa-users text-[36px] text-[#ED1B24]"></i>
+            <div>
+              <p class="font-semibold text-xl">Certified Handyman</p>
+              <p class="text-justify mt-3">
+                Our office time is always open for you. Just contact us. Our
+                inspection team will communicate shortly & Will brief you
+                detail. The work will be completed soon.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex gap-4 hover:shadow-xl ease-in-out p-4 cursor-pointer"
+          >
+            <i class="fa-solid fa-truck text-[36px] text-[#ED1B24]"></i>
+            <div>
+              <p class="font-semibold text-xl">EMERGENCY SERVICE PROVIDER</p>
+              <p class="text-justify mt-3">
+                We maintain 100% safety and security guidelines of WHO about
+                Covid-19. Contact us for getting best service at Singapore.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex gap-4 hover:shadow-xl ease-in-out p-4 cursor-pointer"
+          >
+            <i
+              class="fa-solid fa-money-check-dollar text-[36px] text-[#ED1B24]"
+            ></i>
+            <div>
+              <p class="font-semibold text-xl">SAVING YOU MORE MONEY</p>
+              <p class="text-justify mt-3">
+                We are trusted 100%. Transparent charges made us unique. No
+                hidden charges after finishing work.
+              </p>
+            </div>
+          </div>
+          <div
+            class="flex gap-4 hover:shadow-xl ease-in-out p-4 cursor-pointer"
+          >
+            <i class="fa-solid fa-calendar-days text-[36px] text-[#ED1B24]"></i>
+            <div>
+              <p class="font-semibold text-xl">YEARS OF EXPERIENCE</p>
+              <p class="text-justify mt-3">
+                We are Singapore's local Handyman since 2010. Our 12+
+                experiences made us our positive reputation. It's a big
+                achievement for us
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- our main services  -->
+      <section id="service" class="bg-[#161619] text-white">
+        <div class="mx-5 md:container md:mx-auto py-20">
+          <div class="flex flex-col gap-4 items-center">
+            <h2 class="text-3xl font-bold">OUR MAIN SERVICES</h2>
+            <div class="h-0.5 w-1/3 bg-[#ED1B24]"></div>
+            <p class="font-semibold text-lg text-[#D1D1D1]">We are open 24x7</p>
+          </div>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-8 mt-10">
+            <a
+              href="./services/electrical.html"
+              class="flex flex-col items-center gap-4 cursor-pointer shadow-md shadow-[#ED1B24] hover:shadow-none ease-in-out p-4"
+            >
+              <i class="fa-solid fa-bolt text-[#ED1B24] text-[36px]"></i>
+              <p class="text-xl font-bold">Electrical</p>
+            </a>
+            <a
+              href="./services/plumbling.html"
+              class="flex flex-col items-center gap-4 cursor-pointer shadow-md shadow-[#ED1B24] hover:shadow-none ease-in-out p-4"
+            >
+              <i class="fa-solid fa-wrench text-[#ED1B24] text-[36px]"></i>
+              <p class="text-xl font-bold">Plumbing</p>
+            </a>
+            <a
+              href="./services/carpentar.html"
+              class="flex flex-col items-center gap-4 cursor-pointer shadow-md shadow-[#ED1B24] hover:shadow-none ease-in-out p-4"
+            >
+              <i class="fa-solid fa-hammer text-[#ED1B24] text-[36px]"></i>
+              <p class="text-xl font-bold">Carpentry</p>
+            </a>
+            <a
+              href="./services/painting.html"
+              class="flex flex-col items-center gap-4 cursor-pointer shadow-md shadow-[#ED1B24] hover:shadow-none ease-in-out p-4"
+            >
+              <i
+                class="fa-solid fa-paint-roller text-[#ED1B24] text-[36px]"
+              ></i>
+              <p class="text-xl font-bold">Painting</p>
+            </a>
+            <div
+              class="flex flex-col items-center gap-4 cursor-pointer shadow-md shadow-[#ED1B24] hover:shadow-none ease-in-out p-4"
+            >
+              <i class="fa-solid fa-water text-[#ED1B24] text-[36px]"></i>
+              <p class="text-xl font-bold">Leakage Repair</p>
+            </div>
+            <div
+              class="flex flex-col items-center gap-4 cursor-pointer shadow-md shadow-[#ED1B24] hover:shadow-none ease-in-out p-4"
+            >
+              <i
+                class="fa-solid fa-trowel-bricks text-[#ED1B24] text-[36px]"
+              ></i>
+              <p class="text-xl font-bold">
+                Wall Mount <br />
+                Installation
+              </p>
+            </div>
+            <a
+              href="./services/door_repair.html"
+              class="flex flex-col items-center gap-4 cursor-pointer shadow-md shadow-[#ED1B24] hover:shadow-none ease-in-out p-4"
+            >
+              <i class="fa-solid fa-door-open text-[#ED1B24] text-[36px]"></i>
+              <p class="text-xl font-bold">Door Repair</p>
+            </a>
+            <div
+              class="flex flex-col items-center gap-4 cursor-pointer shadow-md shadow-[#ED1B24] hover:shadow-none ease-in-out p-4"
+            >
+              <i class="fa-solid fa-lock-open text-[#ED1B24] text-[36px]"></i>
+              <p class="text-xl font-bold">Locksmith</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- what we do  -->
+      <section id="about" class="mx-5 md:container md:mx-auto my-20 py-20">
+        <div class="lg:flex flex-row-reverse gap-8">
+          <div class="lg:w-1/2">
+            <h2 class="text-3xl font-bold">WHO ARE WE?</h2>
+            <div class="h-0.5 w-1/3 bg-[#ED1B24] mt-4"></div>
+            <div class="accordion mt-10">
+              <div class="accordion-item">
+                <button
+                  class="accordion-header shadow-md w-full flex justify-between items-center p-4"
+                >
+                  <span class="font-semibold flex gap-4 items-center"
+                    ><i class="fa-solid fa-briefcase"></i> About Company</span
+                  >
+                  <span class="accordion-icon">
+                    <i class="fas fa-chevron-down"></i>
+                  </span>
+                </button>
+                <div class="accordion-content p-4 hidden">
+                  <p class="text-justify">
+                    We are committed to being the most trusted local handyman
+                    service provider in Singapore for all your residential,
+                    Commercial & Industrial sectors. <br />We provides a
+                    comprehensive solution for all of your local handyman
+                    services. As an integrated provider of local handyman
+                    services, you can expect to receive all your local handyman,
+                    renovation & demolition requirements done via a WhatsApp
+                    Message. <br />You can book multiple home or handyman
+                    services at a very affordable price, and receive excellent
+                    customer support 24/7.
+                  </p>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <button
+                  class="accordion-header shadow-md w-full flex justify-between items-center p-4"
+                >
+                  <span class="font-semibold flex gap-4 items-center"
+                    ><i class="fa-solid fa-clock"></i>Our Mission</span
+                  >
+                  <span class="accordion-icon">
+                    <i class="fas fa-chevron-down"></i>
+                  </span>
+                </button>
+                <div class="accordion-content p-4 hidden">
+                  <p class="text-justify">
+                    Our organization’s mission is to serve the best quality
+                    local handyman service to all clients of Singapore in a
+                    professional manner.
+                  </p>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <button
+                  class="accordion-header shadow-md w-full flex justify-between items-center p-4"
+                >
+                  <span class="font-semibold flex gap-4 items-center"
+                    ><i class="fa-solid fa-globe"></i>Our Vision</span
+                  >
+                  <span class="accordion-icon">
+                    <i class="fas fa-chevron-down"></i>
+                  </span>
+                </button>
+                <div class="accordion-content p-4 hidden">
+                  <p class="text-justify">
+                    Our organization’s vision is to providing our flexible range
+                    of services is sure to answer most of your house repair and
+                    house improvement needs. Able to meet your demands at your
+                    flexible.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="why relative mt-20 lg:mt-0 h-[80vh] lg:w-1/2">
+            <div class="absolute top-0 bg-black/50 w-full h-full">
+              <div class="flex flex-col justify-center h-full p-10 gap-4">
+                <i class="fa-solid fa-thumbs-up text-[72px] text-[#ED1B24]"></i>
+                <h2 class="text-3xl font-bold text-white">
+                  Solving problems since 2010
+                </h2>
+                <div class="h-0.5 w-1/3 bg-[#ED1B24]"></div>
+                <p class="text-lg text-white">
+                  We are very proud to be serving our local area for over 12
+                  years!
+                  <br />
+                  You will not wrong to take our services as your business tool.
+                  <br />
+                  We Provide The Best Handyman service in residential,
+                  Commercial & Industrial sectors.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- our location and email -->
+      <section id="contact" class="mx-5 md:container md:mx-auto my-20 py-20">
+        <div class="flex flex-col items-center lg:items-start gap-4">
+          <h2 class="text-3xl font-bold">CONTACT WITH US</h2>
+          <div class="h-0.5 w-1/3 bg-[#ED1B24]"></div>
+        </div>
+        <div class="lg:flex justify-between gap-8 mt-10">
+          <div class="lg:w-1/2">
+            <p class="text-lg font-semibold">Locate us</p>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.780010223893!2d103.89352509999999!3d1.3071758999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da186ad1996c7d%3A0x81e3f3d01601d524!2s21A%20Poole%20Rd%2C%20Singapore%20437508!5e0!3m2!1sen!2sbd!4v1688884153113!5m2!1sen!2sbd"
+              width="100%"
+              height="100%"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+          <div class="lg:w-1/2 mt-10 lg:mt-0">
+            <p class="text-lg font-semibold">Left us a message</p>
+            <form class="flex flex-col gap-4 shadow-xl p-5 mt-5">
+              <input
+                placeholder="Your Name"
+                class="px-4 py-2 border-2 focus:outline-[#ED1B24]"
+              />
+              <input
+                placeholder="Your Email"
+                class="px-4 py-2 border-2 focus:outline-[#ED1B24]"
+              />
+              <input
+                placeholder="Your Phone"
+                class="px-4 py-2 border-2 focus:outline-[#ED1B24]"
+              />
+              <textarea
+                placeholder="Your Message"
+                rows="8"
+                class="px-4 py-2 border-2 focus:outline-[#ED1B24]"
+              ></textarea>
+              <button class="px-4 py-2 bg-[#ED1B24] text-white font-semibold">
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- testimonial  -->
+      <section class="mx-5 md:container md:mx-auto my-20 py-20">
+        <div class="flex flex-col items-center lg:items-start gap-4">
+          <h2 class="text-3xl font-bold">OUR TESTIMONIALS</h2>
+          <div class="h-0.5 w-1/3 bg-[#ED1B24]"></div>
+        </div>
+        <div class="mt-10">
+          <p class="text-lg font-semibold uppercase">What Our Customers Say</p>
+          <div class="mt-10 md:flex gap-8">
+            <div class="md:w-1/2 shadow-lg shadow-[#ED1B24] hover:shadow p-5">
+              <i class="fa-solid fa-comment text-4xl text-[#ED1B24]"></i>
+              <p class="text-justify my-5">
+                They are polite, fast and awesome! Had an additional issue with
+                the water pipe but was rectified with what was suggested by them
+                on the spot. Good job! Highly recommended
+              </p>
+              <div class="flex items-center gap-2">
+                <img
+                  class="rounded-full h-[50px]"
+                  src="./assets/customer1.webp"
+                  alt="customer_img"
+                />
+                <p class="text-sm font-semibold">Jane Oliver</p>
+              </div>
+            </div>
+            <div
+              class="md:w-1/2 mt-8 md:mt-0 shadow-lg shadow-[#ED1B24] hover:shadow p-5"
+            >
+              <i class="fa-solid fa-comment text-4xl text-[#ED1B24]"></i>
+              <p class="text-justify my-5">
+                Wardrobe sliding door problem. Messaged them the issue and
+                responded fast and fixed price. Within 30minutes come to my
+                location & repaired it nicely. Will recommend to their service.
+              </p>
+              <div class="flex items-center gap-2">
+                <img
+                  class="rounded-full h-[50px]"
+                  src="./assets/customer2.webp"
+                  alt="customer_img"
+                />
+                <p class="text-sm font-semibold">James Winston</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-10">
+          <p class="text-lg font-semibold uppercase">Our Achivements</p>
+          <div
+            class="mt-10 bg-[#ED1B24] p-10 text-white grid grid-cols-2 md:grid-cols-4 gap-8"
+          >
+            <div class="flex flex-col items-center gap-2">
+              <p class="text-3xl font-bold">1249</p>
+              <i class="fa-solid fa-heart text-3xl"></i>
+              <p class="font-semibold text-center">Happy Clients</p>
+            </div>
+            <div class="flex flex-col items-center gap-2">
+              <p class="text-3xl font-bold">4.8</p>
+              <i class="fa-solid fa-star text-3xl"></i>
+              <p class="font-semibold text-center">Average Rating</p>
+            </div>
+            <div class="flex flex-col items-center gap-2">
+              <p class="text-3xl font-bold">2549</p>
+              <i class="fa-solid fa-comment text-3xl"></i>
+              <p class="font-semibold text-center">Total Reviews</p>
+            </div>
+            <div class="flex flex-col items-center gap-2">
+              <p class="text-3xl font-bold">12</p>
+              <i class="fa-solid fa-calendar text-3xl"></i>
+              <p class="font-semibold text-center">Total Experience</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="bg-[#161619] text-[#FFFFFF85]">
+      <section class="mx-5 md:container md:mx-auto md:flex">
+        <div class="md:w-1/2 p-5">
+          <p class="font-semibold text-xl text-white">Connect with us</p>
+          <div class="h-0.5 w-1/3 bg-[#ED1B24] my-5"></div>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <div class="flex gap-4 items-center">
+              <i
+                class="fa-solid fa-map-location-dot text-[36px] text-[#ED1B24]"
+              ></i>
+              <div>
+                <p class="text-[20px] uppercase">
+                  Partners engineering & renovation pte Ltd
+                </p>
+                <p class="text-[14px]">21A Poole Rd, Singapore 437508</p>
+              </div>
+            </div>
+            <div class="flex gap-4 items-center">
+              <i
+                class="fa-solid fa-phone-volume text-[36px] text-[#ED1B24]"
+              ></i>
+              <div>
+                <p class="text-[20px]">+65 8578 5018</p>
+                <p class="text-[14px]">24/7 Emergency Services</p>
+              </div>
+            </div>
+            <div class="flex gap-4 items-center">
+              <i class="fa-solid fa-envelope text-[36px] text-[#ED1B24]"></i>
+              <div>
+                <p class="text-[20px] uppercase">Left us an email</p>
+                <p class="text-[14px]">alamripo@yahoo.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-5 md:w-1/2">
+          <p class="font-semibold text-xl text-white">Our services</p>
+          <div class="h-0.5 w-1/3 bg-[#ED1B24] my-5"></div>
+          <ul class="text-lg grid grid-cols-3 lg:grid-cols-4 gap-4">
+            <li>
+              <a
+                class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                href="#"
+                >Electrical</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                href="#"
+                >Plumbing</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                href="#"
+                >Painting</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                href="#"
+                >Carpentry</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                href="#"
+                >Door Repair</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                href="#"
+                >Locksmith</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                href="#"
+                >Lekage Repair</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                href="#"
+                >Wall Mount</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+      <div class="h-0.5 bg-[#ED1B24] my-5"></div>
+      <p class="py-5 text-center">
+        Copyright © 2023 <span class="text-white">Top100Handyman</span>. All
+        rights reserved.
+      </p>
+    </footer>
+    <!-- internal js  -->
+    <script src="./app.js"></script>
+  </body>
+</html>

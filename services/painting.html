@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Painting Service</title>
+    <!-- favicon  -->
+    <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon" />
+    <!-- internal css  -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- icons link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <!-- tailwind cdn  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- navbar -->
+    <header class="py-5">
+      <nav
+        class="flex justify-between items-center md:container md:mx-auto mx-5"
+      >
+        <div class="z-40">
+          <a class="flex gap-2 items-center" href="#">
+            <img
+              src="../assets/logo.png"
+              alt="nav_logo"
+              class="w-[50px] h-[50px]"
+            />
+            <p class="uppercase text-[#ED1B24] font-extrabold text-xl">
+              Top100Handyman
+            </p>
+          </a>
+        </div>
+        <div
+          class="nav-links duration-500 lg:static absolute z-30 bg-white min-h-[100vh] lg:min-h-fit left-0 top-[-100%] lg:w-auto w-full flex items-center px-5 py-5 lg:py-0"
+        >
+          <ul
+            class="flex lg:flex-row flex-col w-full lg:gap-[4vw] gap-8 text-3xl lg:text-[16px] text-[#202020] uppercase font-semibold"
+          >
+            <li>
+              <a class="hover:text-[#ED1B24]" href="../index.html">Home</a>
+            </li>
+            <li>
+              <a class="hover:text-[#ED1B24]" href="../about_us.html">About Us</a>
+            </li>
+            <li class="relative group">
+              <a
+                href="../secvices.html"
+                class="hover:text-[#ED1B24] cursor-pointer"
+                >Services</a
+              >
+              <ul
+                class="lg:absolute hidden lg:group-hover:block ease-linear bg-white p-5"
+              >
+                <li>
+                  <a
+                    class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                    href="./electrical.html"
+                    >Electrical</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                    href="./plumbling.html"
+                    >Plumbing</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                    href="./painting.html"
+                    >Painting</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                    href="./carpentar.html"
+                    >Carpentry</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                    href="./door_repair.html"
+                    >Door Repair</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                    href="#"
+                    >Locksmith</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                    href="#"
+                    >Lekage Repair</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                    href="#"
+                    >Wall Mount <br />
+                    Installation</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a class="hover:text-[#ED1B24]" href="../works.html"
+                >Our Works</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-[#ED1B24]" href="../contact_us.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex items-center gap-6 z-40 w-fit">
+          <ion-icon
+            onclick="onToggleMenu(this)"
+            name="menu"
+            class="text-3xl cursor-pointer lg:hidden text-[#ED1B24]"
+          ></ion-icon>
+        </div>
+      </nav>
+    </header>
+    <!-- fixed contact options -->
+    <div
+      class="w-fit fixed top-1/4 right-0 md:left-0 md:top-1/3 lg:top-1/2 group z-20"
+    >
+      <a
+        href="http://wa.me/+6585785018"
+        class="flex gap-4 bg-[#ED1B24] p-3 text-white font-semibold"
+      >
+        <i class="fa-brands fa-whatsapp text-xl"></i>
+        <p class="hidden group-hover:block ease-in-out duration-300">
+          +65 8578 5018
+        </p>
+      </a>
+      <a
+        href="tel:+6585785018"
+        class="flex gap-4 bg-[#151515] p-3 text-white font-semibold"
+      >
+        <i class="fa-solid fa-phone-volume text-xl"></i>
+        <p class="hidden group-hover:block ease-in-out duration-300">
+          +65 8578 5018
+        </p>
+      </a>
+      <a
+        href="mailto:alamripo@yahoo.com"
+        class="flex gap-4 bg-[#ED1B24] p-3 text-white font-semibold"
+      >
+        <i class="fa-solid fa-envelope text-xl"></i>
+        <p class="hidden group-hover:block ease-in-out duration-300">
+          alamripo@yahoo.com
+        </p>
+      </a>
+    </div>
+    <main class="bg-gray-300">
+      <section class="mx-5 md:container md:mx-auto py-10">
+        <h2 class="text-3xl font-bold">Painting Services in Singapore</h2>
+        <div class="flex my-5 gap-4">
+          <img
+            src="../assets/paiting.jpg"
+            class="h-[300px] w-full md:w-1/2 lg:w-full"
+            alt=""
+          />
+          <img
+            src="../assets/paiting2.jpg"
+            class="h-[300px] w-full hidden md:block md:w-1/2 lg:w-full"
+            alt=""
+          />
+          <img
+            src="../assets/paiting3.jpg"
+            class="h-[300px] w-full hidden lg:block"
+            alt=""
+          />
+        </div>
+        <div class="flex flex-col gap-5">
+          <p class="text-justify font-semibold">
+            Painting services renovating your house or residence or even
+            commercial space and office certainly fulfill the experienced
+            outcome and feel fresh while staying. Local Handyman Sg offers the
+            best painting renovation in Singapore give you an accurate estimate
+            of your painting cost. If you need renovation service for painting
+            your house or workplace then you are in the right place right now.
+            Paintings can change an older house or office with new ordinary
+            look. Local Handyman Sg would like to provide you the expert people
+            for your renovated painting need when it is about house or office
+            painting with cheap and reasonable prices. Whenever you are
+            contracting an experienced painting service like Local Handyman Sg
+            is always there for you anytime anywhere nears your area.
+          </p>
+          <ul class="list-disc">
+            <li>Budget friendly services</li>
+            <li>Quality and value assurance</li>
+            <li>Quality products & workmanship</li>
+            <li>Reasonable pricing</li>
+            <li>Regional & national coverage</li>
+            <li>Suitable scheduling</li>
+            <li>Thorough cleanliness</li>
+            <li>Timely delivery</li>
+          </ul>
+          <h2 class="text-xl font-bold">
+            Local Handyman SG Painting Renovation Service:
+          </h2>
+          <ul class="list-disc">
+            <li>Artist creative wall paint design</li>
+            <li>Anti-mould, anti-fungal, anti-viral, odorless paint</li>
+            <li>Ceiling paint</li>
+            <li>Custom colour paint</li>
+            <li>Dulux paint series</li>
+            <li>Epoxy paint</li>
+            <li>Exterior paint</li>
+            <li>Nippon paint series</li>
+            <li>Paintable Sealant</li>
+            <li>Paint removal</li>
+            <li>Plastering</li>
+            <li>Scraping of peeling paint</li>
+            <li>Water and Oil-based paint</li>
+            <li>Water and Oil-based sealer coating</li>
+            <li>Wood stain and paint</li>
+          </ul>
+          <h2 class="text-xl font-bold">
+            Commercial Painting Services in Singapore
+          </h2>
+          <p class="text-justify font-semibold">
+            Local Handyman Sg’s skilled and expert handyman painters can work on
+            any size or structure perfectly for commercial painting service in
+            Singapore. Therefore if you need painting renovation for your
+            commercial or industrial and residential property, Local Handyman
+            Sg’s skillful painters here to provide you with the experienced
+            service including the most affordable painters in Singapore
+          </p>
+          <h2 class="text-xl font-bold">Commercial Painting Services</h2>
+          <ul class="list-disc">
+            <li>Building painting</li>
+            <li>Camp painting</li>
+            <li>Factory painting</li>
+            <li>Floor/ Epoxy painting</li>
+            <li>Hospitals painting</li>
+            <li>Industrial painting</li>
+            <li>Office painting (exterior and interior)</li>
+            <li>Outlet painting</li>
+            <li>Retail shop painting</li>
+            <li>Schools painting</li>
+            <li>Shop painting</li>
+            <li>Shopping centres painting</li>
+            <li>Warehouse painting</li>
+            <li>Wood & metal painting</li>
+          </ul>
+          <h2 class="text-xl font-bold">Condominium Painting Services</h2>
+          <p class="text-justify font-semibold">
+            Want a perfect shine and outlook of your condo a facelift and add
+            value to your property with Local Handyman Sg’s expert condominium
+            painting service Singapore. Stunning combination of various visual
+            paints is often the easiest and most affordable way to brighten up
+            your lovable condo.
+          </p>
+          <ul class="list-disc">
+            <li>Additional protection of investment</li>
+            <li>Compatibility with style & complete makeover</li>
+            <li>Emphasis on a clean look</li>
+            <li>Heightening of mood</li>
+            <li>Improvement aesthetics</li>
+            <li>Increase of property value</li>
+            <li>Transformation of home appearance</li>
+            <li>Exterior condo painting</li>
+            <li>Interior condo painting</li>
+            <li>Gate painting</li>
+            <li>Roof painting</li>
+          </ul>
+          <h2 class="text-xl font-bold">HDB House Painting Services</h2>
+          <p class="text-justify font-semibold">
+            Local Handyman Sg’s paint service provider in Singapore offers the
+            best HDB house painting service Singapore with wide range of quality
+            paints. You want to calling years of working experiences HDB
+            painting services provider in Singapore then Local Handyman Sg will
+            be there for you.
+          </p>
+          <ul class="list-disc">
+            <li>HDB executive apartment – single storey</li>
+            <li>HDB executive apartment – double storeys</li>
+            <li>2 room 2 colour</li>
+            <li>3 room 2 colour</li>
+            <li>4 room 3 colour</li>
+            <li>5 room 3 colour</li>
+            <li>HDB maisonette apartment</li>
+          </ul>
+          <h2 class="text-xl font-bold">ICI Painting Services</h2>
+          <p class="text-justify font-semibold">
+            Since 1931 one of the first alkyd based paints, Dulux is the brand
+            name has been used by both Imperial Chemical Industries (ICI) and
+            DuPont. In case, you are looking for a reliable ICI painting
+            services Singapore from Local Handyman Sg, who can deliver a hassle
+            free work. Local Handyman Sg offers Dulux based wide connections of
+            painters who are committed and experienced at professional painting
+            works.
+          </p>
+          <ul class="list-disc">
+            <li>Colour ceiling</li>
+            <li>Corner terrace</li>
+            <li>Inter terrace or clustered</li>
+            <li>Oil based sealer</li>
+            <li>Single room painting</li>
+            <li>Shop house</li>
+            <li>Water based sealer</li>
+            <li>2 room 2 colour</li>
+            <li>3 room 2 colour</li>
+            <li>4 room 3 colour</li>
+            <li>5 room 3 colour</li>
+          </ul>
+          <h2 class="text-xl font-bold">Landed House Painting Services</h2>
+          <p class="text-justify font-semibold">
+            In Singapore to the owners housing on landed properties are most the
+            important asset classes. Additionally the exterior house painting
+            solely last about five to moreover sis years. Local Handyman Sg is a
+            standard and professional landed house painting service company with
+            experienced and renowned painters in Singapore. Our expertise
+            working with any types of landed properties included cleaning and
+            washing, clearing up works; erect scaffolding, painting works, wall
+            preparation and final inspection for hand over near your area
+            anytime in Singapore.
+          </p>
+          <ul class="list-disc">
+            <li>Corner terrace</li>
+            <li>Clustered houses</li>
+            <li>Detached bungalow and houses</li>
+            <li>Good class bungalows</li>
+            <li>Inter terrace</li>
+            <li>Landed paintings</li>
+            <li>Semi detached</li>
+            <li>Shop houses</li>
+          </ul>
+          <h2 class="text-xl font-bold">Nippon Painting Services</h2>
+          <p class="text-justify font-semibold">
+            Day by day in certain amount of time passes by, commercial or
+            residential paint can get faded away or out glowed. After time being
+            your chosen colour is out dated or feel like no more suit the rest
+            of the furniture and other households. This is why Local Handyman Sg
+            offers the expertise and superb Nippon paint services in Singapore
+            whenever you are calling for painting service.
+          </p>
+          <ul class="list-disc">
+            <li>All in 1 odourless white paint</li>
+            <li>Anti mould for ceilings paint</li>
+            <li>Easy wash</li>
+            <li>Expresskote</li>
+            <li>Matex</li>
+            <li>MozzieGaurd</li>
+            <li>Odourless sealer</li>
+            <li>Weatherbond</li>
+            <li>Vinyl Silk</li>
+          </ul>
+          <h2 class="text-xl font-bold">Room Painting Services</h2>
+          <p class="text-justify font-semibold">
+            Local handyman Sg is the best and professional room painting
+            services you are looking for only a few rooms in your place that
+            provides room painting services in Singapore. May be it is your
+            bedroom, living room or kitchen in your condo, HDB or landed home we
+            are the professional painters for your room painting service to all
+            around Singapore.
+          </p>
+          <ul class="list-disc">
+            <li>Cabinet painting or refinishing</li>
+            <li>Deck painting and staining</li>
+            <li>Fence and door painting</li>
+            <li>Home exterior painting</li>
+            <li>Paint removal</li>
+            <li>Special textured painting</li>
+          </ul>
+          <h2 class="text-xl font-bold">
+            Painting Renovation Service Contact:
+          </h2>
+          <p class="text-justify font-semibold">
+            In the end, there are various types of renovation service we’re
+            providing in Singapore near your area anytime with the expert hands.
+            If you need any type standard or touch up painting service or even
+            any wall painting services then feel free to call up on painting
+            renovation service contact for Local Handyman Sg:+65 94323470
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-[#161619] text-[#FFFFFF85]">
+      <section class="mx-5 md:container md:mx-auto md:flex">
+        <div class="md:w-1/2 p-5">
+          <p class="font-semibold text-xl text-white">Connect with us</p>
+          <div class="h-0.5 w-1/3 bg-[#ED1B24] my-5"></div>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <div class="flex gap-4 items-center">
+              <i
+                class="fa-solid fa-map-location-dot text-[36px] text-[#ED1B24]"
+              ></i>
+              <div>
+                <p class="text-[20px] uppercase">
+                  Partners engineering & renovation pte Ltd
+                </p>
+                <p class="text-[14px]">21A Poole Rd, Singapore 437508</p>
+              </div>
+            </div>
+            <div class="flex gap-4 items-center">
+              <i
+                class="fa-solid fa-phone-volume text-[36px] text-[#ED1B24]"
+              ></i>
+              <div>
+                <p class="text-[20px]">+65 8578 5018</p>
+                <p class="text-[14px]">24/7 Emergency Services</p>
+              </div>
+            </div>
+            <div class="flex gap-4 items-center">
+              <i class="fa-solid fa-envelope text-[36px] text-[#ED1B24]"></i>
+              <div>
+                <p class="text-[20px] uppercase">Left us an email</p>
+                <p class="text-[14px]">alamripo@yahoo.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-5 md:w-1/2">
+          <p class="font-semibold text-xl text-white">Our services</p>
+          <div class="h-0.5 w-1/3 bg-[#ED1B24] my-5"></div>
+          <ul class="text-lg grid grid-cols-3 lg:grid-cols-4 gap-4">
+            <li>
+              <a
+                class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                href="#"
+                >Electrical</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                href="#"
+                >Plumbing</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                href="#"
+                >Painting</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                href="#"
+                >Carpentry</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                href="#"
+                >Door Repair</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                href="#"
+                >Locksmith</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                href="#"
+                >Lekage Repair</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                href="#"
+                >Wall Mount</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+      <div class="h-0.5 bg-[#ED1B24] my-5"></div>
+      <p class="py-5 text-center">
+        Copyright © 2023 <span class="text-white">Top100Handyman</span>. All
+        rights reserved.
+      </p>
+    </footer>
+    <!-- internal js  -->
+    <script src="../app.js"></script>
+  </body>
+</html>

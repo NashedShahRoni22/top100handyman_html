@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Door Repair Service</title>
+    <!-- favicon  -->
+    <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon" />
+    <!-- internal css  -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- icons link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <!-- tailwind cdn  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- navbar -->
+    <header class="py-5">
+      <nav
+        class="flex justify-between items-center md:container md:mx-auto mx-5"
+      >
+        <div class="z-40">
+          <a class="flex gap-2 items-center" href="#">
+            <img
+              src="../assets/logo.png"
+              alt="nav_logo"
+              class="w-[50px] h-[50px]"
+            />
+            <p class="uppercase text-[#ED1B24] font-extrabold text-xl">
+              Top100Handyman
+            </p>
+          </a>
+        </div>
+        <div
+          class="nav-links duration-500 lg:static absolute z-30 bg-white min-h-[100vh] lg:min-h-fit left-0 top-[-100%] lg:w-auto w-full flex items-center px-5 py-5 lg:py-0"
+        >
+          <ul
+            class="flex lg:flex-row flex-col w-full lg:gap-[4vw] gap-8 text-3xl lg:text-[16px] text-[#202020] uppercase font-semibold"
+          >
+            <li>
+              <a class="hover:text-[#ED1B24]" href="../index.html">Home</a>
+            </li>
+            <li>
+              <a class="hover:text-[#ED1B24]" href="../about_us.html"
+                >About Us</a
+              >
+            </li>
+            <li class="relative group">
+              <a
+                href="../secvices.html"
+                class="hover:text-[#ED1B24] cursor-pointer"
+                >Services</a
+              >
+              <ul
+                class="lg:absolute hidden lg:group-hover:block ease-linear bg-white p-5"
+              >
+                <li>
+                  <a
+                    class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                    href="./electrical.html"
+                    >Electrical</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                    href="./plumbling.html"
+                    >Plumbing</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                    href="./painting.html"
+                    >Painting</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                    href="./carpentar.html"
+                    >Carpentry</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                    href="./door_repair.html"
+                    >Door Repair</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                    href="#"
+                    >Locksmith</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                    href="#"
+                    >Lekage Repair</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                    href="#"
+                    >Wall Mount <br />
+                    Installation</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a class="hover:text-[#ED1B24]" href="../works.html"
+                >Our Works</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-[#ED1B24]"
+                href="../contact_us.html"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="flex items-center gap-6 z-40 w-fit">
+          <ion-icon
+            onclick="onToggleMenu(this)"
+            name="menu"
+            class="text-3xl cursor-pointer lg:hidden text-[#ED1B24]"
+          ></ion-icon>
+        </div>
+      </nav>
+    </header>
+    <!-- fixed contact options -->
+    <div
+      class="w-fit fixed top-1/4 right-0 md:left-0 md:top-1/3 lg:top-1/2 group z-20"
+    >
+      <a
+        href="http://wa.me/+6585785018"
+        class="flex gap-4 bg-[#ED1B24] p-3 text-white font-semibold"
+      >
+        <i class="fa-brands fa-whatsapp text-xl"></i>
+        <p class="hidden group-hover:block ease-in-out duration-300">
+          +65 8578 5018
+        </p>
+      </a>
+      <a
+        href="tel:+6585785018"
+        class="flex gap-4 bg-[#151515] p-3 text-white font-semibold"
+      >
+        <i class="fa-solid fa-phone-volume text-xl"></i>
+        <p class="hidden group-hover:block ease-in-out duration-300">
+          +65 8578 5018
+        </p>
+      </a>
+      <a
+        href="mailto:alamripo@yahoo.com"
+        class="flex gap-4 bg-[#ED1B24] p-3 text-white font-semibold"
+      >
+        <i class="fa-solid fa-envelope text-xl"></i>
+        <p class="hidden group-hover:block ease-in-out duration-300">
+          alamripo@yahoo.com
+        </p>
+      </a>
+    </div>
+    <main class="bg-gray-200">
+      <section class="mx-5 md:container md:mx-auto py-10">
+        <h2 class="text-3xl font-bold">Door Repair Services in Singapore</h2>
+        <div class="my-5 lg:flex lg:gap-4">
+          <img
+            src="../assets/door repair.jpg"
+            class="hidden lg:block h-[300px] w-full"
+            alt=""
+          />
+          <img
+            src="../assets/door repair banner.jpg"
+            class="h-[300px] w-full"
+            alt=""
+          />
+          <img
+            src="../assets/lock smith.jpg"
+            class="hidden lg:block h-[300px] w-full"
+            alt=""
+          />
+        </div>
+        <div class="flex flex-col gap-5">
+          <p class="text-justify font-semibold">
+            Households or even office apartments could be getting older and
+            rusty being affected after a certain time; similar would happen with
+            the apartment doors and windows. By using door knobs, latches,
+            hinges or handles regular basis these doors hardware could be aged,
+            broken, damaged and unusable, so for that door repairing can fix
+            those nuts and bolts. Whilst using the faulty door hardware would
+            become quite pain and problem for a certain amount of time during
+            its usability and life cycle. Now, we are going to write down the
+            top 10 reliable door repair services in Singapore.
+            <br />
+            Here we are pointing out the most door repair services that can be
+            available 24/7 in Singapore. One of the top notch and best handyman
+            service in Singapore is Local Handyman Sg. This best handyman
+            service company provides the best door repair Singapore. Here we go
+            for the Singapore door repair service review and the top 10 reliable
+            door repair services in Singapore 2022
+          </p>
+          <h2 class="text-3xl font-bold">1. Sliding Door Repair</h2>
+          <p class="text-justify font-semibold">
+            This is very common that the sliding doors to get sticky. Cause of
+            that makes slide hard for one to open or close. Once the sliding
+            door has become dirty and needs to be cleaned you need the sliding
+            door repair service and sliding door repair expert like Local
+            Handyman Sg sliding door repair service. <br />
+            To repair the sliding door there are various methods would apply but
+            we put a few of those processes like adjusting or installing or even
+            replacing the roller, getting rid of the stop molding, realigning
+            the door etc.
+          </p>
+          <h2 class="text-xl font-bold">Common Sliding Door Issues</h2>
+          <p class="text-justify font-semibold">
+            Identify the common problems before sliding door repair. Sliding
+            doors can encounter several common problems over time, impacting
+            both their functionality and aesthetics. Some of these issues
+            include
+          </p>
+          <ul class="list-disc">
+            <li>Sticking or jamming during opening or closing</li>
+            <li>Tough to slide smoothly along the tracks</li>
+            <li>Causing gaps or air leaks for misaligned doors.</li>
+            <li>Damaged or worn-out handles and locks</li>
+            <li>
+              Glass or frame damage due to accidents or weather conditions
+            </li>
+          </ul>
+          <h2 class="text-xl font-bold">
+            Professional Sliding Door Repair Service
+          </h2>
+          <ul class="list-disc">
+            <li>
+              Getting sliding door repair with professional door repair experts
+              who have years of extensive knowledge in repairing sliding doors.
+            </li>
+            <li>
+              Professional door experts easily handle every task from simple to
+              complex which is related to sliding door.
+            </li>
+            <li>
+              One of the most important features of professionals sliding door
+              repair experts is that task are completed within a specific
+              timeline.
+            </li>
+            <li>
+              Very rare possibility to happen any risk during sliding door
+              repair with professional door repair experts.
+            </li>
+          </ul>
+          <h2 class="text-3xl font-bold">2. Glass Door Repair</h2>
+          <p class="text-justify font-semibold">
+            We are living in the most gorgeous time frame in the world where
+            using glass doors are a unique concept in the design that keeps the
+            environment widely open. Now these days it is a very common glass
+            door that exists in commercial properties and especially in office
+            environments. Different types of glass doors are uses in various
+            concepts. There are common problem that occurs while using glass
+            doors like door alignment, door closer needing to replace, door
+            closer making some sound, rusty glass door hinge, the door cannot
+            open etc
+            <br />
+            Local Handyman Sg offers the best glass door repair service in
+            Singapore. Replacing broken or shuttered glass, floor spring
+            replacement, glass door alignment correction, glass door roller
+            system, glass door locks and glass door hinges repair and
+            replacement can reform the door function again.
+          </p>
+          <h2 class="text-3xl font-bold">3. Door Lock Repair</h2>
+          <p class="text-justify font-semibold">
+            This type of repair is one of the most functioning hardware mounted
+            on door that prevents to entrance or exit of any suspicious or
+            unwanted access inside of your apartment. In the time being door
+            locks would be broken and unusable, loose nut, stuck bolt, loose
+            knob and nonfunctioning locks, accidentally broken keys inside of
+            the lock, key insertion issues and door lock seizure can’t prevent
+            the lock system purposes. <br />
+            Door lock repair service in Singapore is perfectly provided by Local
+            Handyman Sg. Sometimes it takes little moment to repair the lock,
+            most of the time it depends on the lock system but our experienced
+            handyman happily comply the door lock repair and replacement service
+            which is the most affordable door repair Singapore.
+          </p>
+          <h2 class="text-3xl font-bold">4. Door Lock</h2>
+          <p class="text-justify font-semibold">
+            Door repair service Singapore is demanding in many cases. Our Local
+            Handyman Sg service provides repair and replacement work for floor
+            springs and door closer. A door closer is commonly used frequently
+            on the main glass or wooden door, especially in commercial building
+            and some HDB apartments. The purpose of the door closer is to
+            automatically close the door efficiently. If you have a door that
+            have been closing slowly all along that suddenly swings too fast and
+            slams when closing, it is very likely that you have a closer spring
+            that is faulty that is in need of a replacement. This is a quick
+            pointing out on the type of door closer used for both glass door and
+            wooden doors. Most of the time glass doors use a floor spring to
+            slow down the speed of closing. This is very commonly use of the
+            exposed door closer for HDB apartments.
+          </p>
+          <h2 class="text-3xl font-bold">5. Door Hinge</h2>
+          <p class="text-justify font-semibold">
+            Without cleaning, maintenance appliances and other household
+            fixtures will decline and fail eventually. In this door repair
+            Singapore review we pointing out the Local Handyman Sg for servicing
+            of the door hinge. While regular basic opening and closing the door
+            it is very common to wear out the door hinge and often it is being
+            rusty and also make a crack noise. To maintain the door hinge keep
+            the door frames in place and intact the door pressure precisely.
+            Replacing the old rusted door hinge can fixed the issue ultimately.
+          </p>
+          <h2 class="text-3xl font-bold">6. Replace Roller Track</h2>
+          <p class="text-justify font-semibold">
+            The most common issue noticed the broken roller on the sliding door
+            due to wear and tear from the constant use case. That creates
+            problem opening or closing the door on the roller track. Local
+            Handyman Sg offers a significant service to replace the roller track
+            of the sliding door in Singapore. <br />
+            Replacement of the roller track would usually require the entire
+            removal of the door, for both the top and bottom roller system.
+            Roller track also varies on various company-manufactured models.
+            After completing the replacement roller tract service the door will
+            be on the track with fair alignment.
+          </p>
+          <h2 class="text-3xl font-bold">7. Aluminum Door Repair</h2>
+          <p class="text-justify font-semibold">
+            In this modern era if you want to transform the whole look of your
+            house or commercial building. Then aluminum door is a sign of
+            elegance when it installs properly. If aluminum doors are not fixed
+            properly in places, there might be a huge risk of security issues.
+            In most cases, some parts of the aluminum doors get damaged and need
+            to repair or replace. Local Handyman Sg has the best door repair
+            specialists and they can change and repair your aluminum door’s
+            damaged parts. <br />
+            If you have aluminum glass doors and they tore down into pieces, we
+            simply place the new glass in them. If you have broken aluminum
+            glass doors. Then Local Handyman Sg expert team can provide aluminum
+            door repair and place the new glass in the frame. Our handyman
+            expert can change your door closers so that door can easily open or
+            shut. Often screws get lost, so our handyman service tighten them.
+            Repairing and replacing the door handles if it is causing issues.
+            However, if the door locks get disturbed, and need to replace it
+            with a new lock door.
+          </p>
+          <h2 class="text-3xl font-bold">8. Wardrobe Repair</h2>
+          <p class="text-justify font-semibold">
+            Nowadays wardrobes are becoming the most important furniture
+            requirement of the household. How often it is a burden while this
+            little thing failed to function on its track, lock or hinge etc.
+            Local Handyman Sg provides the best expert handyman at your service
+            to wardrobe repair. <br />
+            Customer satisfaction is the most priority at Local Handyman Sg
+            service, expert handyman are that experienced to handle the dealt of
+            wardrobe repair. By changing the door sliding track, repair,ing and
+            replacement of the wardrobe hinge or the nonfunctioning lock.
+          </p>
+          <h2 class="text-3xl font-bold">9. Replacement of Broken Glass</h2>
+          <p class="text-justify font-semibold">
+            In this 21st century we are living with glass world environment that
+            feels the openness of every side of nature. Sliding glass doors and
+            windows are everywhere in the infrastructure. Regular basis use
+            cases accidentally those glass doors and windows are broken,
+            chipped, cracked or even nonfunctional but most of the time
+            replacement of broken glass would be the unique and final solution.
+            <br />
+            Local Handyman Sg liked to provide you with the best and smart
+            fixing service for broken glass issues by repair or replacement even
+            upgrading. Therefore you’ll get truly hassle-free service
+            immediately and you can continue working space tense free during the
+            servicing.
+          </p>
+          <h2 class="text-3xl font-bold">10. Floor Spring Replacement</h2>
+          <p class="text-justify font-semibold">
+            A floor spring is a mechanical door device that has auto-close and
+            soft-close capabilities during the door opening and closing.
+            According to the door width and weight floor spring adjust the
+            closing speed. Floor springs can become installed in any residential
+            and commercial property. It could be nonfunctional after a certain
+            time or within the warranty period. <br />
+            Getting the perfect floor spring replacement service from the Local
+            Handyman Sg is highly praiseworthy. Our master of glass repairing
+            and replacement handyman experts can handle the floor spring issue
+            just in time. <br />
+            Therefore, any kind of issues and problems related among those 10
+            repairing services just don’t hesitate to call the Local Handyman
+            Sg. There are several services also provided by the Local Handyman
+            Sg, likely fix door, door repair service, door handle repair, fix
+            sliding door, sliding door service and repair, door hardware repair,
+            shower doors, folding doors, balcony sliding door, swing glass door
+            etc. Further ado, in any circumstance of these problems you can get
+            their service 24/7, just pick the phone and call for service.
+          </p>
+          <h2 class="text-xl font-bold">Common Door Problems</h2>
+          <ul class="list-disc">
+            <li>Jamming or sticking the door</li>
+            <li>Noisy hinges or squeaking</li>
+            <li>Misaligned or loose door handles</li>
+            <li>Drafts or air leaks around the door</li>
+            <li>Difficulty in opening or closing doors</li>
+            <li>Damaged or worn-out weatherstripping</li>
+            <li>Faulty door locks or broken</li>
+            <li>Swollen or warped doors</li>
+          </ul>
+          <h2 class="text-xl font-bold">Solutions to Common Door Problems</h2>
+          <ul class="list-disc">
+            <li>Adjusting strike and plates hinges</li>
+            <li>Lubricating locks and hinges</li>
+            <li>Tightening loose handles or sscrews</li>
+            <li>Installing weatherstripping</li>
+            <li>Replacing or repairing damaged parts</li>
+            <li>Resizing or realigning doors</li>
+            <li>Upgrading security and locks</li>
+          </ul>
+          <h2 class="text-xl font-bold">HDB House Painting Services</h2>
+          <p class="text-justify font-semibold">
+            Local Handyman Sg’s paint service provider in Singapore offers the
+            best HDB house painting service Singapore with wide range of quality
+            paints. You want to calling years of working experiences HDB
+            painting services provider in Singapore then Local Handyman Sg will
+            be there for you.
+          </p>
+          <ul class="list-disc">
+            <li>HDB executive apartment – single storey</li>
+            <li>HDB executive apartment – double storeys</li>
+            <li>2 room 2 colour</li>
+            <li>3 room 2 colour</li>
+            <li>4 room 3 colour</li>
+            <li>5 room 3 colour</li>
+            <li>HDB maisonette apartment</li>
+          </ul>
+          <h2 class="text-xl font-bold">The benefit of door repair</h2>
+          <ul class="list-disc">
+            <li>
+              Maximum Security: Door repair service confirm the maximum security
+              at your home or business by repairing door properly. Door repair
+              experts identify the door issues and work on it to solve the issue
+              for making sure security.
+            </li>
+            <li>
+              Cos-effective: Door repair is more cost-effective than replacing
+              the doors totally. By repairing door, you can save your money in
+              comparison to installing a new door. Door repair is the best
+              option for cost-effectiveness.
+            </li>
+            <li>
+              Improved aesthetics: The appearance of door become more aesthetics
+              after door repair. Door repair service can fix any cosmetic issues
+              with your door, such as scratches or dents, restoring it to its
+              original condition.
+            </li>
+            <li>
+              Energy-efficiency: Whenever the issues are noticeable on door, it
+              would be one of the reasons to lose energy. After solving issues,
+              make more homes or businesses energy efficient.
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-[#161619] text-[#FFFFFF85]">
+      <section class="mx-5 md:container md:mx-auto md:flex">
+        <div class="md:w-1/2 p-5">
+          <p class="font-semibold text-xl text-white">Connect with us</p>
+          <div class="h-0.5 w-1/3 bg-[#ED1B24] my-5"></div>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <div class="flex gap-4 items-center">
+              <i
+                class="fa-solid fa-map-location-dot text-[36px] text-[#ED1B24]"
+              ></i>
+              <div>
+                <p class="text-[20px] uppercase">
+                  Partners engineering & renovation pte Ltd
+                </p>
+                <p class="text-[14px]">21A Poole Rd, Singapore 437508</p>
+              </div>
+            </div>
+            <div class="flex gap-4 items-center">
+              <i
+                class="fa-solid fa-phone-volume text-[36px] text-[#ED1B24]"
+              ></i>
+              <div>
+                <p class="text-[20px]">+65 8578 5018</p>
+                <p class="text-[14px]">24/7 Emergency Services</p>
+              </div>
+            </div>
+            <div class="flex gap-4 items-center">
+              <i class="fa-solid fa-envelope text-[36px] text-[#ED1B24]"></i>
+              <div>
+                <p class="text-[20px] uppercase">Left us an email</p>
+                <p class="text-[14px]">alamripo@yahoo.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-5 md:w-1/2">
+          <p class="font-semibold text-xl text-white">Our services</p>
+          <div class="h-0.5 w-1/3 bg-[#ED1B24] my-5"></div>
+          <ul class="text-lg grid grid-cols-3 lg:grid-cols-4 gap-4">
+            <li>
+              <a
+                class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                href="#"
+                >Electrical</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                href="#"
+                >Plumbing</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                href="#"
+                >Painting</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                href="#"
+                >Carpentry</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                href="#"
+                >Door Repair</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                href="#"
+                >Locksmith</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                href="#"
+                >Lekage Repair</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                href="#"
+                >Wall Mount</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+      <div class="h-0.5 bg-[#ED1B24] my-5"></div>
+      <p class="py-5 text-center">
+        Copyright © 2023 <span class="text-white">Top100Handyman</span>. All
+        rights reserved.
+      </p>
+    </footer>
+    <!-- internal js  -->
+    <script src="../app.js"></script>
+  </body>
+</html>

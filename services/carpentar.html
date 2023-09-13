@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carpenter Service</title>
+    <!-- favicon  -->
+    <link rel="shortcut icon" href="../assets/logo.png" type="image/x-icon" />
+    <!-- internal css  -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- icons link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+    <!-- tailwind cdn  -->
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- navbar -->
+    <header class="py-5">
+      <nav
+        class="flex justify-between items-center md:container md:mx-auto mx-5"
+      >
+        <div class="z-40">
+          <a class="flex gap-2 items-center" href="#">
+            <img
+              src="../assets/logo.png"
+              alt="nav_logo"
+              class="w-[50px] h-[50px]"
+            />
+            <p class="uppercase text-[#ED1B24] font-extrabold text-xl">
+              Top100Handyman
+            </p>
+          </a>
+        </div>
+        <div
+          class="nav-links duration-500 lg:static absolute z-30 bg-white min-h-[100vh] lg:min-h-fit left-0 top-[-100%] lg:w-auto w-full flex items-center px-5 py-5 lg:py-0"
+        >
+          <ul
+            class="flex lg:flex-row flex-col w-full lg:gap-[4vw] gap-8 text-3xl lg:text-[16px] text-[#202020] uppercase font-semibold"
+          >
+            <li>
+              <a class="hover:text-[#ED1B24]" href="../index.html">Home</a>
+            </li>
+            <li>
+              <a class="hover:text-[#ED1B24]" href="../about_us.html">About Us</a>
+            </li>
+            <li class="relative group">
+              <a
+                href="../secvices.html"
+                class="hover:text-[#ED1B24] cursor-pointer"
+                >Services</a
+              >
+              <ul
+                class="lg:absolute hidden lg:group-hover:block ease-linear bg-white p-5"
+              >
+                <li>
+                  <a
+                    class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                    href="./electrical.html"
+                    >Electrical</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                    href="./plumbling.html"
+                    >Plumbing</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                    href="./painting.html"
+                    >Painting</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                    href="./carpentar.html"
+                    >Carpentry</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                    href="./door_repair.html"
+                    >Door Repair</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                    href="#"
+                    >Locksmith</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                    href="#"
+                    >Lekage Repair</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                    href="#"
+                    >Wall Mount <br />
+                    Installation</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a class="hover:text-[#ED1B24]" href="../works.html"
+                >Our Works</a
+              >
+            </li>
+            <li>
+              <a class="hover:text-[#ED1B24]" href="../contact_us.html">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="flex items-center gap-6 z-40 w-fit">
+          <ion-icon
+            onclick="onToggleMenu(this)"
+            name="menu"
+            class="text-3xl cursor-pointer lg:hidden text-[#ED1B24]"
+          ></ion-icon>
+        </div>
+      </nav>
+    </header>
+    <!-- fixed contact options -->
+    <div
+      class="w-fit fixed top-1/4 right-0 md:left-0 md:top-1/3 lg:top-1/2 group z-20"
+    >
+      <a
+        href="http://wa.me/+6585785018"
+        class="flex gap-4 bg-[#ED1B24] p-3 text-white font-semibold"
+      >
+        <i class="fa-brands fa-whatsapp text-xl"></i>
+        <p class="hidden group-hover:block ease-in-out duration-300">
+          +65 8578 5018
+        </p>
+      </a>
+      <a
+        href="tel:+6585785018"
+        class="flex gap-4 bg-[#151515] p-3 text-white font-semibold"
+      >
+        <i class="fa-solid fa-phone-volume text-xl"></i>
+        <p class="hidden group-hover:block ease-in-out duration-300">
+          +65 8578 5018
+        </p>
+      </a>
+      <a
+        href="mailto:alamripo@yahoo.com"
+        class="flex gap-4 bg-[#ED1B24] p-3 text-white font-semibold"
+      >
+        <i class="fa-solid fa-envelope text-xl"></i>
+        <p class="hidden group-hover:block ease-in-out duration-300">
+          alamripo@yahoo.com
+        </p>
+      </a>
+    </div>
+    <main class="bg-gray-200">
+      <section class="mx-5 md:container md:mx-auto py-10">
+        <h2 class="text-3xl font-bold">Carpenter Services in Singapore</h2>
+        <div class="flex my-5 gap-4">
+          <img
+            src="../assets/carpentry.jpg"
+            class="h-[300px] w-full md:w-1/2 lg:w-full"
+            alt=""
+          />
+          <img
+            src="../assets/banner.jpg"
+            class="h-[300px] w-full hidden md:block md:w-1/2 lg:w-full"
+            alt=""
+          />
+          <img
+            src="../assets/why_us.jpg"
+            class="h-[300px] w-full hidden lg:block"
+            alt=""
+          />
+        </div>
+        <div class="flex flex-col gap-5">
+          <p class="text-justify font-semibold">
+            Building or renovating your precious house or office with modernized
+            materials and designs carpentry gives the most artistic value on
+            viewing sight. Various furnishing choice of carpentry can boost the
+            interior and exterior outlook with elegances. Local handyman
+            Services provide carpenter service in Singapore in your local. In
+            commercial or residential property most of the carpentry service in
+            Singapore is done in a huge scale like renovations.
+          </p>
+          <p class="text-justify font-semibold">
+            Singapore is the world class city and to renovating your home and
+            office decor, your first thinking in mind is how to modernize look
+            of your furnishers, therefore you must need expert carpenter
+            services in Singapore. You better looking for a home improvement
+            expert carpenter near your local in Singapore to furnish your
+            dreaming household materials then local handyman Sg will provides
+            you the likeminded best experienced carpenter on your demand.
+          </p>
+          <h2 class="text-3xl font-bold">Carpenter Singapore Services list</h2>
+          <p class="text-justify font-semibold">
+            There are different and various types of carpenter services are
+            available in Singapore. Customize shelves or furniture, any display
+            into a partition or mounting picture frame, alteration and repair of
+            cabinet, doors, door frame and shelves or handrails, varnish woods
+            etc. We are enlisted the most common carpenter services list in the
+            followings:
+          </p>
+          <p class="font-bold">
+            Assemble (install) or Dismantle of the following
+          </p>
+          <ul class="list-disc">
+            <li>Beds</li>
+            <li>Chairs</li>
+            <li>Furniture</li>
+            <li>Shelves</li>
+            <li>Table</li>
+          </ul>
+          <p class="font-bold">
+            Supply (installation) or replacement of the following
+          </p>
+          <ul class="list-disc">
+            <li>Cabinet doors below the sink</li>
+            <li>Cabinet hinges</li>
+            <li>Cabinet locks</li>
+            <li>Cupboard/ cabinet track</li>
+            <li>Doors</li>
+            <li>Door frame</li>
+            <li>Doorknobs</li>
+            <li>Door locks</li>
+            <li>Supporting brackets</li>
+            <li>Vanity mirror</li>
+            <li>Wardrobe support</li>
+          </ul>
+          <h2 class="text-3xl font-bold">Carpenter Singapore Services list</h2>
+          <p class="text-justify font-semibold">
+            There are several renowned carpenter service companies available in
+            Singapore and provides excellent handyman service. Local handyman Sg
+            is the carpenter service company, can design and fabricate pretty
+            much anything that what is made of wood. From simple shelving units
+            and custom made bedroom furniture to bespoke and made to measure
+            bathroom and kitchen units. This handyman service company also
+            provides –
+          </p>
+          <ul class="list-disc">
+            <li>Bathroom vanity</li>
+            <li>Built-in wardrobe</li>
+            <li>Direct carpenter</li>
+            <li>Door repair/ replacement</li>
+            <li>Feature wall</li>
+            <li>Furniture repair</li>
+            <li>Handle installations (Door, shelves, cabinets etc)</li>
+            <li>Hinge installation & replacement</li>
+            <li>Kitchen cabinet and carpentry</li>
+            <li>Platform bed</li>
+            <li>Shoe cabinet</li>
+            <li>TV consoles</li>
+            <li>Woodworking craft</li>
+            <li>Wooden door repair & installation</li>
+            <li>Varnishing furniture & furniture repairs</li>
+          </ul>
+          <h2 class="text-3xl font-bold">Furniture Assembly</h2>
+          <p class="text-justify font-semibold">
+            Carpentry is an art on home or office decorating and furnishing. You
+            need furniture assembly then you must call the local handyman
+            carpenter service near your area for an expert interior and exterior
+            performance works. Any types of carpentry works or furniture
+            assembly local handyman Sg service always near beside your needs.
+          </p>
+          <ul class="list-disc">
+            <li>Carpentry work</li>
+            <li>Commercial services</li>
+            <li>Contracting services</li>
+            <li>Custom built in carpentry</li>
+            <li>Furniture</li>
+            <li>Interior design</li>
+            <li>Refurbishing and reupholstery</li>
+            <li>Renovation services</li>
+            <li>Residential services</li>
+            <li>Woodworking</li>
+          </ul>
+          <h2 class="text-3xl font-bold">General Carpentry Services</h2>
+          <p class="text-justify font-semibold">
+            Carpenters can provide woodworking crafts, focusing on craftsmanship
+            and the quality of their woodwork. So, general carpentry services
+            are included in –
+          </p>
+          <ul class="list-disc">
+            <li>Deck construction</li>
+            <li>Deck repair</li>
+            <li>Design and build</li>
+            <li>Floor joist construction</li>
+            <li>Framing</li>
+            <li>Pool deck construction</li>
+            <li>Residential and commercial interior design</li>
+            <li>Structural rot removal and repairs</li>
+            <li>Structural stair repair</li>
+          </ul>
+          <h2 class="text-3xl font-bold">Home Carpentry Services</h2>
+          <p class="text-justify font-semibold">
+            Kitchen carpentry is very common home carpentry services in
+            Singapore. Wooden cabinets or custom made drawers are designed to
+            have multiple compartments that give your home a rustic look.
+          </p>
+          <ul class="list-disc">
+            <li>Bedroom Carpentry</li>
+            <li>Built-In Wardrobes</li>
+            <li>Countertop</li>
+            <li>Door Replacement</li>
+            <li>Feature Wall</li>
+            <li>Kitchen Cabinets</li>
+            <li>Kitchen Countertop</li>
+            <li>Platform Bed</li>
+            <li>Railing Installation</li>
+            <li>Ramp Installation</li>
+            <li>Rough Carpentry</li>
+            <li>Shoe Cabinets</li>
+            <li>Stair Framing</li>
+            <li>Stairs and Railing</li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-[#161619] text-[#FFFFFF85]">
+      <section class="mx-5 md:container md:mx-auto md:flex">
+        <div class="md:w-1/2 p-5">
+          <p class="font-semibold text-xl text-white">Connect with us</p>
+          <div class="h-0.5 w-1/3 bg-[#ED1B24] my-5"></div>
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <div class="flex gap-4 items-center">
+              <i
+                class="fa-solid fa-map-location-dot text-[36px] text-[#ED1B24]"
+              ></i>
+              <div>
+                <p class="text-[20px] uppercase">
+                  Partners engineering & renovation pte Ltd
+                </p>
+                <p class="text-[14px]">21A Poole Rd, Singapore 437508</p>
+              </div>
+            </div>
+            <div class="flex gap-4 items-center">
+              <i
+                class="fa-solid fa-phone-volume text-[36px] text-[#ED1B24]"
+              ></i>
+              <div>
+                <p class="text-[20px]">+65 8578 5018</p>
+                <p class="text-[14px]">24/7 Emergency Services</p>
+              </div>
+            </div>
+            <div class="flex gap-4 items-center">
+              <i class="fa-solid fa-envelope text-[36px] text-[#ED1B24]"></i>
+              <div>
+                <p class="text-[20px] uppercase">Left us an email</p>
+                <p class="text-[14px]">alamripo@yahoo.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="p-5 md:w-1/2">
+          <p class="font-semibold text-xl text-white">Our services</p>
+          <div class="h-0.5 w-1/3 bg-[#ED1B24] my-5"></div>
+          <ul class="text-lg grid grid-cols-3 lg:grid-cols-4 gap-4">
+            <li>
+              <a
+                class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                href="#"
+                >Electrical</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                href="#"
+                >Plumbing</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                href="#"
+                >Painting</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                href="#"
+                >Carpentry</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                href="#"
+                >Door Repair</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                href="#"
+                >Locksmith</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                href="#"
+                >Lekage Repair</a
+              >
+            </li>
+            <li>
+              <a
+                class="hover:text-[#ED1B24] border-b-1 border-[#ED1B24]"
+                href="#"
+                >Wall Mount</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+      <div class="h-0.5 bg-[#ED1B24] my-5"></div>
+      <p class="py-5 text-center">
+        Copyright © 2023 <span class="text-white">Top100Handyman</span>. All
+        rights reserved.
+      </p>
+    </footer>
+    <!-- internal js  -->
+    <script src="../app.js"></script>
+  </body>
+</html>
